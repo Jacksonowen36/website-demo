@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bindplane</title>
+  <title>Bindplane - Telemetry Made Easy</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     /* Reset & base */
-    body, h1, h2, p, ul, li, a, button {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    body, h1, h2, h3, p, ul, li, a, button {
+      margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Inter', sans-serif;
       color: #1B1F23;
     }
@@ -50,11 +48,18 @@
       align-items: center;
       justify-content: space-between;
     }
-    header .logo {
-      font-weight: 700;
-      font-size: 1.8rem;
+    header .logo img {
+      height: 40px;
+      width: auto;
+    }
+    nav a {
+      margin-left: 30px;
+      font-weight: 600;
+      font-size: 1rem;
       color: #0d47a1;
-      letter-spacing: 1px;
+    }
+    nav a:hover {
+      color: #083c8a;
     }
 
     /* Hero */
@@ -126,6 +131,45 @@
       line-height: 1.4;
     }
 
+    /* Support Section */
+    .support {
+      padding: 60px 20px;
+      background: white;
+      max-width: 900px;
+      margin: 0 auto 80px;
+      border-radius: 12px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+    .support h2 {
+      font-weight: 700;
+      color: #0d47a1;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .support ul {
+      list-style: none;
+      padding-left: 0;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+    .support ul li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    .support ul li a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+    .support ul li a:hover {
+      text-decoration: underline;
+    }
+    .support p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
     /* Footer */
     footer {
       background: #f3f4f6;
@@ -134,7 +178,6 @@
       color: #666;
       font-size: 0.9rem;
       border-top: 1px solid #ddd;
-      margin-top: 80px;
     }
 
     /* DocsBot AI chatbot container */
@@ -161,7 +204,15 @@
 
   <header>
     <div class="container">
-      <div class="logo">Bindplane</div>
+      <div class="logo">
+        <!-- Replace with your real logo image path -->
+        <img src="assets/images/AdobeExpress-Logo.png" alt="Bindplane Logo" />
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#support">Support</a>
+        <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener">Docs</a>
+      </nav>
     </div>
   </header>
 
@@ -173,7 +224,7 @@
     </div>
   </section>
 
-  <section class="features">
+  <section id="features" class="features">
     <div class="container">
       <div class="feature-item">
         <h3>Easy Setup</h3>
@@ -188,6 +239,18 @@
         <p>Built for cloud environments with modern security and reliability.</p>
       </div>
     </div>
+  </section>
+
+  <section id="support" class="support">
+    <h2>Support</h2>
+    <ul>
+      <li><a href="https://bindplane.com/docs/advanced-setup/installation/prerequisites/" target="_blank">How do I deploy Bindplane with advanced features?</a></li>
+      <li><a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank">What happens if the Bindplane server connection is interrupted?</a></li>
+      <li><a href="https://bindplane.com/docs/pricing/" target="_blank">How is Bindplane priced?</a></li>
+      <li><a href="https://bindplane.com/docs/faq/" target="_blank">How do I reset the file collector?</a></li>
+      <li><a href="https://bindplane.com/docs/destinations/google-secops/" target="_blank">How do I route Windows Event logs to Google SecOps?</a></li>
+    </ul>
+    <p>If you don’t find what you need here, use our chatbot in the bottom right or <a href="mailto:support@bindplane.com">email support@bindplane.com</a>.</p>
   </section>
 
   <footer>
