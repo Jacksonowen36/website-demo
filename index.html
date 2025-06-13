@@ -1,153 +1,174 @@
 <!DOCTYPE HTML>
-<!--
-	Lens by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lens by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Make DocsBot AI chatbot float bottom right */
-			#docsbotai-root {
-				position: fixed;
-				bottom: 18px;
-				right: 18px;
-				z-index: 9000;
-			}
-		</style>
-	</head>
-	<body class="is-preload-0 is-preload-1 is-preload-2">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bindplane - Telemetry Configuration Made Easy</title>
 
-		<!-- Main -->
-			<div id="main">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Bindplane</h1>
-						<p>Testng for Bindplane</p>
-						<ul class="icons">
-			
-						</ul>
-					</header>
+  <style>
+    /* Reset and base */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
 
-				<!-- Thumbnail -->
-					<section id="thumbnails">
-						<article>
-							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/thumbs/01.jpg" alt="" /></a>
-							<h2>Diam tempus accumsan</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
-							<h2>Vivamus convallis libero</h2>
-							<p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.jpg" alt="" /></a>
-							<h2>Nec accumsan enim felis</h2>
-							<p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="" /></a>
-							<h2>Donec maximus nisi eget</h2>
-							<p>Tristique in nulla vel congue. Sed sociis natoque parturient nascetur.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.jpg" alt="" /></a>
-							<h2>Nullam vitae nunc vulputate</h2>
-							<p>In pellentesque cursus velit id posuere. Donec vehicula nulla.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>Phasellus magna faucibus</h2>
-							<p>Nulla dignissim libero maximus tellus varius dictum ut posuere magna.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt="" /></a>
-							<h2>Proin quis mauris</h2>
-							<p>Etiam ultricies, lorem quis efficitur porttitor, facilisis ante orci urna.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/08.jpg"><img src="images/thumbs/08.jpg" alt="" /></a>
-							<h2>Gravida quis varius enim</h2>
-							<p>Nunc egestas congue lorem. Nullam dictum placerat ex sapien tortor mattis.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="" /></a>
-							<h2>Morbi eget vitae adipiscing</h2>
-							<p>In quis vulputate dui. Maecenas metus elit, dictum praesent lacinia lacus.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt="" /></a>
-							<h2>Habitant tristique senectus</h2>
-							<p>Vestibulum ante ipsum primis in faucibus orci luctus ac tincidunt dolor.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/11.jpg"><img src="images/thumbs/11.jpg" alt="" /></a>
-							<h2>Pharetra ex non faucibus</h2>
-							<p>Ut sed magna euismod leo laoreet congue. Fusce congue enim ultricies.</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/12.jpg"><img src="images/thumbs/12.jpg" alt="" /></a>
-							<h2>Mattis lorem sodales</h2>
-							<p>Feugiat auctor leo massa, nec vestibulum nisl erat faucibus, rutrum nulla.</p>
-						</article>
-					</section>
+    a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
-						</ul>
-					</footer>
+    /* Container */
+    #main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
-			</div>
-<div id="docsbotai-root"></div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/main.js"></script>
+    /* Header / Hero */
+    header#header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 4rem 1rem 3rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+    header#header h1 {
+      margin: 0 0 1rem;
+      font-weight: 700;
+      font-size: 3rem;
+    }
+    header#header p {
+      font-size: 1.25rem;
+      margin: 0 0 2rem;
+    }
 
-		<script type="text/javascript">
-			window.DocsBotAI = window.DocsBotAI || {},
-			DocsBotAI.init = function(e) {
-				return new Promise((t, r) => {
-					var n = document.createElement("script");
-					n.type = "text/javascript", n.async = !0, n.src = "https://widget.docsbot.ai/chat.js";
-					let o = document.getElementsByTagName("script")[0];
-					o.parentNode.insertBefore(n, o),
-					n.addEventListener("load", () => {
-						let n;
-						Promise.all([
-							new Promise((t, r) => {
-								window.DocsBotAI.mount(Object.assign({}, e)).then(t).catch(r)
-							}),
-							(n = function e(t) {
-								return new Promise(e => {
-									if (document.querySelector(t)) return e(document.querySelector(t));
-									let r = new MutationObserver(n => {
-										if (document.querySelector(t)) return e(document.querySelector(t)), r.disconnect()
-									});
-									r.observe(document.body, { childList: !0, subtree: !0 })
-								})
-							})("#docsbotai-root"),
-						]).then(() => t()).catch(r)
-					}),
-					n.addEventListener("error", e => {
-						r(e.message)
-					})
-				})
-			};
-		</script>
+    /* Primary Button */
+    .btn-primary {
+      background-color: #0d47a1;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 1.75rem;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #083c8a;
+      outline: none;
+    }
 
-		<script type="text/javascript">
-			DocsBotAI.init({ id: "NLp3u7P45ckdouTFWFu3/k6clmpCRR2m6P4xx5LIN" });
-		</script>
-	</body>
+    /* Footer */
+    footer#footer {
+      margin-top: 4rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    footer#footer a {
+      color: #0d47a1;
+    }
+
+    /* DocsBot AI chatbot floating container */
+    #docsbotai-root {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 9000;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header#header h1 {
+        font-size: 2.2rem;
+      }
+      header#header p {
+        font-size: 1rem;
+      }
+      #main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main">
+
+    <header id="header">
+      <h1>Bindplane</h1>
+      <p>Telemetry Configuration Made Easy</p>
+      <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener" class="btn-primary">Get Started</a>
+    </header>
+
+    <section>
+      <h2>Why Bindplane?</h2>
+      <p>Effortlessly configure and manage telemetry collectors with a scalable, cloud-native platform trusted by thousands.</p>
+      <p>Automate your observability workflows, reduce downtime, and gain complete visibility into your systems.</p>
+    </section>
+
+  </div>
+
+  <!-- DocsBot AI chatbot container -->
+  <div id="docsbotai-root"></div>
+
+  <!-- DocsBot AI embed scripts -->
+  <script type="text/javascript">
+    window.DocsBotAI = window.DocsBotAI || {},
+    DocsBotAI.init = function(e) {
+      return new Promise((t, r) => {
+        var n = document.createElement("script");
+        n.type = "text/javascript", n.async = !0, n.src = "https://widget.docsbot.ai/chat.js";
+        let o = document.getElementsByTagName("script")[0];
+        o.parentNode.insertBefore(n, o),
+        n.addEventListener("load", () => {
+          let n;
+          Promise.all([
+            new Promise((t, r) => {
+              window.DocsBotAI.mount(Object.assign({}, e)).then(t).catch(r)
+            }),
+            (n = function e(t) {
+              return new Promise(e => {
+                if (document.querySelector(t)) return e(document.querySelector(t));
+                let r = new MutationObserver(n => {
+                  if (document.querySelector(t)) return e(document.querySelector(t)), r.disconnect()
+                });
+                r.observe(document.body, { childList: !0, subtree: !0 })
+              })
+            })("#docsbotai-root"),
+          ]).then(() => t()).catch(r)
+        }),
+        n.addEventListener("error", e => {
+          r(e.message)
+        })
+      })
+    };
+  </script>
+
+  <script type="text/javascript">
+    DocsBotAI.init({ id: "NLp3u7P45ckdouTFWFu3/k6clmpCRR2m6P4xx5LIN" });
+  </script>
+
+  <footer id="footer">
+    <p>&copy; 2025 Bindplane. All rights reserved.</p>
+    <p>Design inspired by Bindplane’s website.</p>
+  </footer>
+
+</body>
 </html>
