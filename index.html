@@ -51,6 +51,7 @@
     header#header img {
       height: 48px;
       width: auto;
+      object-fit: contain;
     }
     header#header h1 {
       margin: 0;
@@ -163,7 +164,7 @@
   <div id="main">
 
     <header id="header">
-      <img src="assets/images/bindplane-logo.png" alt="Bindplane Logo" />
+      <img src="assets/images/AdobeExpress-Logo.png" alt="Bindplane Logo" />
       <h1>Bindplane Support</h1>
       <p>Need help? Browse FAQs or chat with our support assistant anytime.</p>
       <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener" class="btn-primary">View Quickstart Guide</a>
@@ -174,4 +175,63 @@
       <ul>
         <li><a href="https://bindplane.com/docs/advanced-setup/installation/prerequisites/" target="_blank">How do I deploy Bindplane with advanced features?</a></li>
         <li><a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank">What happens if the Bindplane server connection is interrupted?</a></li>
-        <li><a href="https://bindplane.com/docs/pri
+        <li><a href="https://bindplane.com/docs/pricing/" target="_blank">How is Bindplane priced?</a></li>
+        <li><a href="https://bindplane.com/docs/faq/" target="_blank">How do I reset the file collector?</a></li>
+        <li><a href="https://bindplane.com/docs/destinations/google-secops/" target="_blank">How do I route Windows Event logs to Google SecOps?</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Support</h2>
+      <p>If you can’t find an answer, please open a support request or email us at <a href="mailto:support@bindplane.com">support@bindplane.com</a>.</p>
+      <p>Our support assistant is available 24/7 to help with common questions and troubleshooting.</p>
+    </section>
+
+  </div>
+
+  <!-- DocsBot AI chatbot container -->
+  <div id="docsbotai-root"></div>
+
+  <!-- DocsBot AI embed scripts -->
+  <script type="text/javascript">
+    window.DocsBotAI = window.DocsBotAI || {},
+    DocsBotAI.init = function(e) {
+      return new Promise((t, r) => {
+        var n = document.createElement("script");
+        n.type = "text/javascript", n.async = !0, n.src = "https://widget.docsbot.ai/chat.js";
+        let o = document.getElementsByTagName("script")[0];
+        o.parentNode.insertBefore(n, o),
+        n.addEventListener("load", () => {
+          let n;
+          Promise.all([
+            new Promise((t, r) => {
+              window.DocsBotAI.mount(Object.assign({}, e)).then(t).catch(r)
+            }),
+            (n = function e(t) {
+              return new Promise(e => {
+                if (document.querySelector(t)) return e(document.querySelector(t));
+                let r = new MutationObserver(n => {
+                  if (document.querySelector(t)) return e(document.querySelector(t)), r.disconnect()
+                });
+                r.observe(document.body, { childList: !0, subtree: !0 })
+              })
+            })("#docsbotai-root"),
+          ]).then(() => t()).catch(r)
+        }),
+        n.addEventListener("error", e => {
+          r(e.message)
+        })
+      })
+    };
+  </script>
+
+  <script type="text/javascript">
+    DocsBotAI.init({ id: "NLp3u7P45ckdouTFWFu3/k6clmpCRR2m6P4xx5LIN" });
+  </script>
+
+  <footer id="footer">
+    <p>&copy; 2025 Bindplane. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
