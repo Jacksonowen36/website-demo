@@ -9,24 +9,90 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
+    /* Full-width header bar */
+    header#header {
+      width: 100vw;
+      background-color: #0d47a1;
+      color: white;
+      padding: 1rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    header#header .left-content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header#header img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    header#header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    header#header .right-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+
+    header#header .right-content p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    header#header .btn-primary {
+      margin: 0;
+      padding: 0.5rem 1.25rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #0d47a1;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    header#header .btn-primary:hover,
+    header#header .btn-primary:focus {
+      background-color: #cce4ff;
+      outline: none;
+    }
+
+    @media (max-width: 600px) {
+      header#header {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      header#header .right-content {
+        align-items: flex-start;
+      }
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: 
-        radial-gradient(circle at 25% 25%, rgba(13, 71, 161, 0.1), transparent 40%),
-        repeating-linear-gradient(45deg, #e3f2fd 0, #e3f2fd 10px, #bbdefb 10px, #bbdefb 20px),
-        linear-gradient(180deg, #f5faff 0%, #ffffff 100%);
+      background: #f9fafb;
       color: #333;
       line-height: 1.6;
       min-height: 100vh;
-    }
-
-    a {
-      color: #0d47a1;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
 
     #main {
@@ -39,158 +105,31 @@
       text-align: center;
     }
 
-    header#header {
-      background-color: #0d47a1;
-      color: white;
-      padding: 3rem 1rem 2.5rem;
-      border-radius: 12px 12px 0 0;
-      margin-bottom: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    header#header img {
-      height: 48px;
-      width: auto;
-      object-fit: contain;
-    }
-    header#header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.8rem;
-      color: white;
-    }
-    header#header p {
-      width: 100%;
-      font-size: 1.25rem;
-      margin: 1rem 0 0;
-      color: #d1e2ff;
-    }
-
-    .btn-primary {
-      background-color: #0d47a1;
-      color: white;
-      font-weight: 700;
-      padding: 0.75rem 1.75rem;
-      border-radius: 5px;
-      font-size: 1.1rem;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-      border: none;
-      margin-top: 1rem;
-    }
-    .btn-primary:hover,
-    .btn-primary:focus {
-      background-color: #083c8a;
-      outline: none;
-    }
-
-    section#faq {
-      text-align: left;
-      background: #f9fbff;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0 0 0 / 0.05);
-      margin-bottom: 3rem;
-      color: #222;
-    }
-    section#faq h2 {
-      margin-top: 0;
-      font-weight: 700;
-      color: #0d47a1;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    section#faq ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    section#faq ul li {
-      margin-bottom: 0.75rem;
-      font-size: 1.1rem;
-    }
-    section#faq ul li a {
-      color: #0d47a1;
-      text-decoration: none;
-    }
-    section#faq ul li a:hover {
-      text-decoration: underline;
-    }
-
-    section#contact {
-      background: #f9fbff;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0 0 0 / 0.05);
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: #222;
-    }
-
-    footer#footer {
-      margin-top: 4rem;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ddd;
-      text-align: center;
-    }
-
+    /* DocsBot AI chatbot container */
     #docsbotai-root {
       position: fixed;
       bottom: 18px;
       right: 18px;
       z-index: 9000;
     }
-
-    @media (max-width: 600px) {
-      header#header h1 {
-        font-size: 2.2rem;
-      }
-      header#header p {
-        font-size: 1rem;
-      }
-      #main {
-        margin: 2rem 1rem;
-        padding: 1rem 1rem 2rem;
-      }
-      section#faq, section#contact {
-        padding: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <div id="main">
-
-    <header id="header">
+  <header id="header">
+    <div class="left-content">
       <img src="assets/images/AdobeExpress-Logo.png" alt="Bindplane Logo" />
       <h1>Bindplane Support</h1>
+    </div>
+    <div class="right-content">
       <p>Need help? Browse FAQs or chat with our support assistant anytime.</p>
       <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener" class="btn-primary">View Quickstart Guide</a>
-    </header>
+    </div>
+  </header>
 
-    <section id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <ul>
-        <li><a href="https://bindplane.com/docs/advanced-setup/installation/prerequisites/" target="_blank">How do I deploy Bindplane with advanced features?</a></li>
-        <li><a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank">What happens if the Bindplane server connection is interrupted?</a></li>
-        <li><a href="https://bindplane.com/docs/pricing/" target="_blank">How is Bindplane priced?</a></li>
-        <li><a href="https://bindplane.com/docs/faq/" target="_blank">How do I reset the file collector?</a></li>
-        <li><a href="https://bindplane.com/docs/destinations/google-secops/" target="_blank">How do I route Windows Event logs to Google SecOps?</a></li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Support</h2>
-      <p>If you can’t find an answer, please open a support request or email us at <a href="mailto:support@bindplane.com">support@bindplane.com</a>.</p>
-      <p>Our support assistant is available 24/7 to help with common questions and troubleshooting.</p>
-    </section>
-
+  <div id="main">
+    <!-- Put your main page content or FAQs here -->
+    <p>Welcome to Bindplane support! Use the chatbot on the bottom right or browse the FAQs to get started.</p>
   </div>
 
   <!-- DocsBot AI chatbot container -->
@@ -232,10 +171,6 @@
   <script type="text/javascript">
     DocsBotAI.init({ id: "NLp3u7P45ckdouTFWFu3/k6clmpCRR2m6P4xx5LIN" });
   </script>
-
-  <footer id="footer">
-    <p>&copy; 2025 Bindplane. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
