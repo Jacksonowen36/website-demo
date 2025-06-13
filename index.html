@@ -6,26 +6,26 @@
   <title>Bindplane - Telemetry Made Easy</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Animate gradient background on whole page */
-    html, body {
+    /* Make particle background container fill screen */
+    #particles-js {
+      position: fixed;
+      width: 100%;
       height: 100%;
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(-45deg, #0d47a1, #1765d1, #3a75d1, #0a3c7b);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: #1B1F23;
-    }
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+      background: #0d47a1; /* fallback background color */
+      z-index: -1; /* behind page content */
+      top: 0;
+      left: 0;
     }
 
-    /* Reset */
+    /* Reset & base */
     body, h1, h2, h3, p, ul, li, a, button {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Inter', sans-serif;
+    }
+    body {
+      color: #1B1F23;
+      background: transparent; /* background handled by particles */
+      min-height: 100vh;
     }
     a {
       color: #0d47a1;
@@ -76,10 +76,10 @@
 
     /* Hero */
     .hero {
-      background: transparent;
-      color: white;
       padding: 100px 20px 60px;
       text-align: center;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
     .hero h1 {
       font-weight: 700;
@@ -87,8 +87,6 @@
       max-width: 700px;
       margin: 0 auto 20px;
       line-height: 1.1;
-      color: white;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
     .hero p {
       font-size: 1.2rem;
@@ -213,14 +211,6 @@
       z-index: 5;
     }
 
-    /* DocsBot AI chatbot container */
-    #docsbotai-root {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      z-index: 9999;
-    }
-
     /* Responsive */
     @media (max-width: 900px) {
       .features .container {
@@ -238,6 +228,9 @@
   </style>
 </head>
 <body>
+
+  <!-- Particle background container -->
+  <div id="particles-js"></div>
 
   <header>
     <div class="container">
@@ -298,6 +291,28 @@
 
   <!-- DocsBot AI chatbot container -->
   <div id="docsbotai-root"></div>
+
+  <!-- Load particles.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Initialize particles.js -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 50 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "move": { "speed": 1 }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      }
+    });
+  </script>
 
   <!-- DocsBot AI embed scripts -->
   <script type="text/javascript">
