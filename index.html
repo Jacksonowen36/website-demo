@@ -1,102 +1,140 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bindplane Support - Help & FAQs</title>
-
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-
+  <title>Bindplane</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Full-width header bar */
-    header#header {
-      width: 100vw;
-      background-color: #0d47a1;
-      color: white;
-      padding: 1rem 3rem;
+    /* Reset & base */
+    body, h1, h2, p, ul, li, a, button {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      color: #1B1F23;
+    }
+    body {
+      background: #fff;
+      line-height: 1.6;
+    }
+    a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      border-bottom: 1px solid #e6e8eb;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
-
-    header#header .left-content {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    header#header h1 {
-      margin: 0;
+    header .logo {
       font-weight: 700;
       font-size: 1.8rem;
+      color: #0d47a1;
+      letter-spacing: 1px;
     }
 
-    header#header .right-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.25rem;
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0d47a1 0%, #1765d1 100%);
+      color: white;
+      padding: 100px 20px 60px;
+      text-align: center;
     }
-
-    header#header .right-content p {
-      margin: 0;
-      font-size: 1rem;
-      font-weight: 400;
+    .hero h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.1;
     }
-
-    header#header .btn-primary {
-      margin: 0;
-      padding: 0.5rem 1.25rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      background-color: #fff;
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #d7e3fa;
+    }
+    .hero .btn-primary {
+      background: white;
       color: #0d47a1;
       font-weight: 700;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
+      padding: 15px 40px;
       border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .hero .btn-primary:hover {
+      background: #d7e3fa;
     }
 
-    header#header .btn-primary:hover,
-    header#header .btn-primary:focus {
-      background-color: #cce4ff;
-      outline: none;
-    }
-
-    @media (max-width: 600px) {
-      header#header {
-        padding: 1rem 1.5rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-      header#header .right-content {
-        align-items: flex-start;
-      }
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
+    /* Features Section */
+    .features {
+      padding: 60px 20px;
       background: #f9fafb;
-      color: #333;
-      line-height: 1.6;
-      min-height: 100vh;
+    }
+    .features .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .feature-item {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+      flex: 1 1 calc(33% - 40px);
+      min-width: 280px;
+      text-align: left;
+    }
+    .feature-item h3 {
+      color: #0d47a1;
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    .feature-item p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.4;
     }
 
-    #main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem 2rem 3rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    /* Footer */
+    footer {
+      background: #f3f4f6;
+      padding: 40px 20px;
       text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+      margin-top: 80px;
     }
 
     /* DocsBot AI chatbot container */
@@ -104,26 +142,57 @@
       position: fixed;
       bottom: 18px;
       right: 18px;
-      z-index: 9000;
+      z-index: 9999;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .features .container {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .feature-item {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header id="header">
-    <div class="left-content">
-      <h1>Bindplane Support</h1>
-    </div>
-    <div class="right-content">
-      <p>Need help? Browse FAQs or chat with our support assistant anytime.</p>
-      <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener" class="btn-primary">View Quickstart Guide</a>
+  <header>
+    <div class="container">
+      <div class="logo">Bindplane</div>
     </div>
   </header>
 
-  <div id="main">
-    <!-- Put your main page content or FAQs here -->
-    <p>Welcome to Bindplane support! Use the chatbot on the bottom right or browse the FAQs to get started.</p>
-  </div>
+  <section class="hero">
+    <div class="container">
+      <h1>Effortless telemetry configuration and management</h1>
+      <p>Automate your observability workflows, reduce downtime, and get real-time insights with Bindplane.</p>
+      <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature-item">
+        <h3>Easy Setup</h3>
+        <p>Deploy collectors quickly with prebuilt integrations and an intuitive UI.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Scalable</h3>
+        <p>Manage thousands of telemetry collectors with centralized control.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Cloud Native</h3>
+        <p>Built for cloud environments with modern security and reliability.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Bindplane. All rights reserved.
+  </footer>
 
   <!-- DocsBot AI chatbot container -->
   <div id="docsbotai-root"></div>
