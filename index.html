@@ -241,16 +241,33 @@
   </section>
 
   <section id="support" class="support">
-    <h2>Support</h2>
-    <ul>
-      <li><a href="https://bindplane.com/docs/advanced-setup/installation/prerequisites/" target="_blank">How do I deploy Bindplane with advanced features?</a></li>
-      <li><a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank">What happens if the Bindplane server connection is interrupted?</a></li>
-      <li><a href="https://bindplane.com/docs/pricing/" target="_blank">How is Bindplane priced?</a></li>
-      <li><a href="https://bindplane.com/docs/faq/" target="_blank">How do I reset the file collector?</a></li>
-      <li><a href="https://bindplane.com/docs/destinations/google-secops/" target="_blank">How do I route Windows Event logs to Google SecOps?</a></li>
-    </ul>
-    <p>If you don’t find what you need here, use our chatbot in the bottom right or <a href="mailto:support@bindplane.com">email support@bindplane.com</a>.</p>
-  </section>
+  <h2>Support</h2>
+  <input type="text" id="faqSearch" placeholder="Search FAQs..." style="width: 100%; padding: 10px; margin-bottom: 20px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;" />
+
+  <ul id="faqList">
+    <li><a href="https://bindplane.com/docs/advanced-setup/installation/prerequisites/" target="_blank">How do I deploy Bindplane with advanced features?</a></li>
+    <li><a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank">What happens if the Bindplane server connection is interrupted?</a></li>
+    <li><a href="https://bindplane.com/docs/pricing/" target="_blank">How is Bindplane priced?</a></li>
+    <li><a href="https://bindplane.com/docs/faq/" target="_blank">How do I reset the file collector?</a></li>
+    <li><a href="https://bindplane.com/docs/destinations/google-secops/" target="_blank">How do I route Windows Event logs to Google SecOps?</a></li>
+  </ul>
+  <p>If you don’t find what you need here, use our chatbot in the bottom right or <a href="mailto:support@bindplane.com">email support@bindplane.com</a>.</p>
+</section>
+
+<script>
+  const faqSearch = document.getElementById('faqSearch');
+  const faqList = document.getElementById('faqList');
+  const faqItems = faqList.getElementsByTagName('li');
+
+  faqSearch.addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    for (let i = 0; i < faqItems.length; i++) {
+      const questionText = faqItems[i].textContent.toLowerCase();
+      faqItems[i].style.display = questionText.includes(filter) ? '' : 'none';
+    }
+  });
+</script>
+
 
   <footer>
     &copy; 2025 Bindplane. All rights reserved.
