@@ -12,14 +12,17 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0d47a1 0%, #121212 100%);
-      color: #eee;
+      background: 
+        radial-gradient(circle at 25% 25%, rgba(13, 71, 161, 0.1), transparent 40%),
+        repeating-linear-gradient(45deg, #e3f2fd 0, #e3f2fd 10px, #bbdefb 10px, #bbdefb 20px),
+        linear-gradient(180deg, #f5faff 0%, #ffffff 100%);
+      color: #333;
       line-height: 1.6;
       min-height: 100vh;
     }
 
     a {
-      color: #82b1ff;
+      color: #0d47a1;
       text-decoration: none;
     }
     a:hover {
@@ -28,18 +31,18 @@
 
     #main {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
+      margin: 3rem auto;
+      padding: 2rem 2rem 3rem;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
     header#header {
-      background-color: #000000;
+      background-color: #0d47a1;
       color: white;
-      padding: 2rem 1rem 3rem;
+      padding: 3rem 1rem 2.5rem;
       border-radius: 12px 12px 0 0;
       margin-bottom: 3rem;
       display: flex;
@@ -63,7 +66,7 @@
       width: 100%;
       font-size: 1.25rem;
       margin: 1rem 0 0;
-      color: #ccc;
+      color: #d1e2ff;
     }
 
     .btn-primary {
@@ -87,17 +90,17 @@
 
     section#faq {
       text-align: left;
-      background: rgba(255 255 255 / 0.05);
+      background: #f9fbff;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0 0 0 / 0.3);
+      box-shadow: 0 4px 12px rgba(0 0 0 / 0.05);
       margin-bottom: 3rem;
-      color: #eee;
+      color: #222;
     }
     section#faq h2 {
       margin-top: 0;
       font-weight: 700;
-      color: #82b1ff;
+      color: #0d47a1;
       font-size: 1.8rem;
       margin-bottom: 1rem;
     }
@@ -110,7 +113,7 @@
       font-size: 1.1rem;
     }
     section#faq ul li a {
-      color: #82b1ff;
+      color: #0d47a1;
       text-decoration: none;
     }
     section#faq ul li a:hover {
@@ -118,21 +121,21 @@
     }
 
     section#contact {
-      background: rgba(255 255 255 / 0.05);
+      background: #f9fbff;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0 0 0 / 0.3);
+      box-shadow: 0 4px 12px rgba(0 0 0 / 0.05);
       font-size: 1.1rem;
       line-height: 1.5;
-      color: #ddd;
+      color: #222;
     }
 
     footer#footer {
       margin-top: 4rem;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #aaa;
-      border-top: 1px solid #222;
+      color: #666;
+      border-top: 1px solid #ddd;
       text-align: center;
     }
 
@@ -151,7 +154,8 @@
         font-size: 1rem;
       }
       #main {
-        padding: 1rem;
+        margin: 2rem 1rem;
+        padding: 1rem 1rem 2rem;
       }
       section#faq, section#contact {
         padding: 1rem;
