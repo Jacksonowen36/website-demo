@@ -176,45 +176,92 @@
     /* Support Section */
     .support {
       margin-top: 3rem;
+      padding: 2rem 3rem;
+      background: #e6f0ff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     .support h2 {
       font-weight: 700;
       color: #0d47a1;
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
       text-align: center;
     }
+
     #faqSearch {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+      padding: 14px 16px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      border: 1px solid #bbb;
+      border-radius: 8px;
       box-sizing: border-box;
+      transition: border-color 0.3s ease;
     }
+
+    #faqSearch:focus {
+      outline: none;
+      border-color: #0d47a1;
+      box-shadow: 0 0 8px rgba(13, 71, 161, 0.3);
+    }
+
     #faqList {
       list-style: none;
-      padding-left: 0;
-      max-width: 600px;
-      margin: 0 auto 30px;
-      color: #444;
+      padding-left: 1.2rem;
+      color: #1a1a1a;
     }
+
     #faqList li {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 1.2rem;
     }
+
+    #faqList li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0d47a1;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1;
+      top: 0;
+    }
+
     #faqList li a {
       color: #0d47a1;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
+
     #faqList li a:hover {
+      color: #083c8a;
       text-decoration: underline;
     }
+
     .support p {
       text-align: center;
       font-size: 1.1rem;
       color: #333;
+      margin-top: 35px;
+    }
+
+    .support p a {
+      color: #0d47a1;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .support p a:hover {
+      color: #083c8a;
     }
 
     /* Footer */
@@ -242,6 +289,9 @@
       #main {
         padding: 1.5rem 1.5rem;
         margin: 2rem auto 4rem;
+      }
+      .support {
+        padding: 1.5rem 1.5rem;
       }
     }
   </style>
