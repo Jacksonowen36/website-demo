@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bindplane - Telemetry Configuration Made Easy</title>
+  <title>Bindplane Support - Help & FAQs</title>
 
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* Reset and base */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -26,7 +25,6 @@
       text-decoration: underline;
     }
 
-    /* Container */
     #main {
       max-width: 900px;
       margin: 0 auto;
@@ -34,25 +32,23 @@
       text-align: center;
     }
 
-    /* Header / Hero */
     header#header {
       background-color: #0d47a1;
       color: white;
-      padding: 4rem 1rem 3rem;
+      padding: 3.5rem 1rem 3rem;
       border-radius: 8px;
       margin-bottom: 3rem;
     }
     header#header h1 {
-      margin: 0 0 1rem;
+      margin: 0 0 0.5rem;
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
     header#header p {
       font-size: 1.25rem;
-      margin: 0 0 2rem;
+      margin: 0 0 1.5rem;
     }
 
-    /* Primary Button */
     .btn-primary {
       background-color: #0d47a1;
       color: white;
@@ -71,7 +67,46 @@
       outline: none;
     }
 
-    /* Footer */
+    section#faq {
+      text-align: left;
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      margin-bottom: 3rem;
+    }
+    section#faq h2 {
+      margin-top: 0;
+      font-weight: 700;
+      color: #0d47a1;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    section#faq ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    section#faq ul li {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    section#faq ul li a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+    section#faq ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section#contact {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
     footer#footer {
       margin-top: 4rem;
       padding: 1rem;
@@ -81,11 +116,6 @@
       text-align: center;
     }
 
-    footer#footer a {
-      color: #0d47a1;
-    }
-
-    /* DocsBot AI chatbot floating container */
     #docsbotai-root {
       position: fixed;
       bottom: 18px;
@@ -93,7 +123,6 @@
       z-index: 9000;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       header#header h1 {
         font-size: 2.2rem;
@@ -104,6 +133,9 @@
       #main {
         padding: 1rem;
       }
+      section#faq, section#contact {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -112,15 +144,26 @@
   <div id="main">
 
     <header id="header">
-      <h1>Bindplane</h1>
-      <p>Telemetry Configuration Made Easy</p>
-      <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener" class="btn-primary">Get Started</a>
+      <h1>Bindplane Support</h1>
+      <p>Need help? Browse FAQs or chat with our support assistant anytime.</p>
+      <a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank" rel="noopener" class="btn-primary">View Quickstart Guide</a>
     </header>
 
-    <section>
-      <h2>Why Bindplane?</h2>
-      <p>Effortlessly configure and manage telemetry collectors with a scalable, cloud-native platform trusted by thousands.</p>
-      <p>Automate your observability workflows, reduce downtime, and gain complete visibility into your systems.</p>
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <ul>
+        <li><a href="https://bindplane.com/docs/advanced-setup/installation/prerequisites/" target="_blank">How do I deploy Bindplane with advanced features?</a></li>
+        <li><a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank">What happens if the Bindplane server connection is interrupted?</a></li>
+        <li><a href="https://bindplane.com/docs/pricing/" target="_blank">How is Bindplane priced?</a></li>
+        <li><a href="https://bindplane.com/docs/faq/" target="_blank">How do I reset the file collector?</a></li>
+        <li><a href="https://bindplane.com/docs/destinations/google-secops/" target="_blank">How do I route Windows Event logs to Google SecOps?</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Support</h2>
+      <p>If you can’t find an answer, please open a support request or email us at <a href="mailto:support@bindplane.com">support@bindplane.com</a>.</p>
+      <p>Our support assistant is available 24/7 to help with common questions and troubleshooting.</p>
     </section>
 
   </div>
@@ -167,7 +210,6 @@
 
   <footer id="footer">
     <p>&copy; 2025 Bindplane. All rights reserved.</p>
-    <p>Design inspired by Bindplane’s website.</p>
   </footer>
 
 </body>
