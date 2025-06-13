@@ -6,7 +6,7 @@
   <title>Bindplane - Telemetry Made Easy</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Background layering */
+    /* Particle background container */
     #particles-js {
       position: fixed;
       width: 100%;
@@ -16,6 +16,7 @@
       top: 0;
       left: 0;
     }
+    /* Gradient overlay for depth */
     #gradient-overlay {
       position: fixed;
       width: 100%;
@@ -45,6 +46,7 @@
     a:hover, a:focus {
       color: #c0d4ff;
       text-decoration: underline;
+      outline: none;
     }
     ul {
       list-style: none;
@@ -59,8 +61,8 @@
 
     /* Header & Nav */
     header {
-      background: rgba(12, 23, 59, 0.85);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(12, 23, 59, 0.95); /* More opaque for visibility */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       padding: 10px 0;
       position: sticky;
       top: 0;
@@ -85,7 +87,7 @@
       height: 50px;
       width: auto;
       display: block;
-      filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6)); /* subtle white glow */
     }
 
     nav {
@@ -434,4 +436,100 @@
         <li><a href="https://bindplane.com/docs/advanced-setup/installation/prerequisites/" target="_blank">How do I deploy Bindplane with advanced features?</a></li>
         <li><a href="https://bindplane.com/docs/getting-started/quickstart-guide" target="_blank">What happens if the Bindplane server connection is interrupted?</a></li>
         <li><a href="https://bindplane.com/docs/pricing/" target="_blank">How is Bindplane priced?</a></li>
-        <li><a href="https://bindplane.com/docs/faq/" target=
+        <li><a href="https://bindplane.com/docs/faq/" target="_blank">How do I reset the file collector?</a></li>
+        <li><a href="https://bindplane.com/docs/destinations/google-secops/" target="_blank">How do I route Windows Event logs to Google SecOps?</a></li>
+      </ul>
+      <p>If you don’t find what you need here, use our chatbot in the bottom right or <a href="mailto:support@bindplane.com">email support@bindplane.com</a>.</p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Bindplane. All rights reserved.
+  </footer>
+
+  <!-- DocsBot AI chatbot container -->
+  <div id="docsbotai-root"></div>
+
+  <!-- Load particles.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Initialize particles.js -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#9cd6ff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.4 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 140,
+          "color": "#a2caff",
+          "opacity": 0.35,
+          "width": 1.2
+        },
+        "move": { "speed": 1.2 }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      }
+    });
+  </script>
+
+  <!-- DocsBot AI embed scripts -->
+  <script type="text/javascript">
+    window.DocsBotAI = window.DocsBotAI || {},
+    DocsBotAI.init = function(e) {
+      return new Promise((t, r) => {
+        var n = document.createElement("script");
+        n.type = "text/javascript", n.async = !0, n.src = "https://widget.docsbot.ai/chat.js";
+        let o = document.getElementsByTagName("script")[0];
+        o.parentNode.insertBefore(n, o),
+        n.addEventListener("load", () => {
+          let n;
+          Promise.all([
+            new Promise((t, r) => {
+              window.DocsBotAI.mount(Object.assign({}, e)).then(t).catch(r)
+            }),
+            (n = function e(t) {
+              return new Promise(e => {
+                if (document.querySelector(t)) return e(document.querySelector(t));
+                let r = new MutationObserver(n => {
+                  if (document.querySelector(t)) return e(document.querySelector(t)), r.disconnect()
+                });
+                r.observe(document.body, { childList: !0, subtree: !0 })
+              })
+            })("#docsbotai-root"),
+          ]).then(() => t()).catch(r)
+        }),
+        n.addEventListener("error", e => {
+          r(e.message)
+        })
+      })
+    };
+  </script>
+
+  <script type="text/javascript">
+    DocsBotAI.init({ id: "NLp3u7P45ckdouTFWFu3/k6clmpCRR2m6P4xx5LIN" });
+  </script>
+
+  <script>
+    // FAQ search filtering
+    const faqSearch = document.getElementById('faqSearch');
+    const faqList = document.getElementById('faqList');
+    const faqItems = faqList.getElementsByTagName('li');
+
+    faqSearch.addEventListener('input', function() {
+      const filter = this.value.toLowerCase();
+      for (let i = 0; i < faqItems.length; i++) {
+        const questionText = faqItems[i].textContent.toLowerCase();
+        faqItems[i].style.display = questionText.includes(filter) ? '' : 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
